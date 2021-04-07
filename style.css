@@ -230,6 +230,8 @@ header .profil h3 {
     position: absolute;
     top: 100px;
     left: 80px;
+    width: 100%;
+    min-height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -637,44 +639,141 @@ header .profil h3 {
     .skill-desc ul {
         font-size: 14px;
     }
+    .content.story .story-col {
+        display: flex;
+        flex-wrap: wrap;
+    }
     .content.story .story-col .story-desc {
         width: 70px;
         height: 120px;
     }
-    .content.story .story-col .story-desc p {
+    .content.story .story-col .story-desc.stara {
+        position: relative;
+        left: -10px;
+        top: -10px;
+    }
+    .content.story .story-col .story-desc.stara img {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    .content.story .story-col .story-desc.stara p {
+        position: relative;
+        left: 0;
+        top: -125px;
         font-size: 8px;
     }
-    .stara :is(img, p) {
-        left: 45px;
-        top: 50px;
+    .content.story .story-col .story-desc.neura {
+        position: relative;
+        left: -5px;
+        top: -10px;
     }
-    .neura :is(img, p) {
-        left: 120px;
-        top: 50px;
+    .content.story .story-col .story-desc.neura img {
+        position: relative;
+        left: 0;
+        top: 0;
     }
-    .gabsa :is(img, p) {
-        left: 195px;
-        top: 50px;
+    .content.story .story-col .story-desc.neura p {
+        position: relative;
+        left: 0;
+        top: -125px;
+        font-size: 8px;
     }
-    .sevenLost :is(img, p) {
-        left: 270px;
-        top: 50px;
+    .content.story .story-col .story-desc.gabsa {
+        position: relative;
+        left: 0px;
+        top: -10px;
     }
-    .arsha :is(img, p) {
-        left: 45px;
-        top: 235px;
+    .content.story .story-col .story-desc.gabsa img {
+        position: relative;
+        left: 0;
+        top: 0;
     }
-    .muara :is(img, p) {
-        left: 120px;
-        top: 235px;
+    .content.story .story-col .story-desc.gabsa p {
+        position: relative;
+        left: 0;
+        top: -125px;
+        font-size: 8px;
     }
-    .tenvis :is(img, p) {
-        left: 195px;
-        top: 235px;
+    .content.story .story-col .story-desc.sevenLost {
+        position: relative;
+        left: 5px;
+        top: -10px;
     }
-    .triplets :is(img, p) {
-        left: 270px;
-        top: 235px;
+    .content.story .story-col .story-desc.sevenLost img {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    .content.story .story-col .story-desc.sevenLost p {
+        position: relative;
+        left: 0;
+        top: -125px;
+        font-size: 8px;
+    }
+    .content.story .story-col .story-desc.arsha {
+        position: relative;
+        left: -10px;
+        top: 0px;
+    }
+    .content.story .story-col .story-desc.arsha img {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    .content.story .story-col .story-desc.arsha p {
+        position: relative;
+        left: 0;
+        top: -125px;
+        font-size: 8px;
+    }
+    .content.story .story-col .story-desc.muara {
+        position: relative;
+        left: -5px;
+        top: 0px;
+    }
+    .content.story .story-col .story-desc.muara img {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    .content.story .story-col .story-desc.muara p {
+        position: relative;
+        left: 0;
+        top: -125px;
+        font-size: 8px;
+    }
+    .content.story .story-col .story-desc.tenvis {
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+    .content.story .story-col .story-desc.tenvis img {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    .content.story .story-col .story-desc.tenvis p {
+        position: relative;
+        left: 0;
+        top: -125px;
+        font-size: 8px;
+    }
+    .content.story .story-col .story-desc.triplets {
+        position: relative;
+        left: 5px;
+        top: 0px;
+    }
+    .content.story .story-col .story-desc.triplets img {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    .content.story .story-col .story-desc.triplets p {
+        position: relative;
+        left: 0;
+        top: -125px;
+        font-size: 8px;
     }
     .container .box .content-box:hover h1{
         transform: scale(1.5);
