@@ -230,7 +230,6 @@ header .profil h3 {
     position: absolute;
     top: 100px;
     left: 80px;
-    width: 100%;
     min-height: 120px;
     display: flex;
     justify-content: center;
@@ -270,37 +269,133 @@ header .profil h3 {
     visibility: visible;
     opacity: 1;
 }
-.stara :is(img, p) {
-    left: 230px;
-    top: 20px;
+.content.story .story-col .story-desc.stara {
+    position: relative;
+    left: 200px;
+    top: -70px;
 }
-.neura :is(img, p) {
-    left: 400px;
-    top: 20px;
+.content.story .story-col .story-desc.stara img {
+    position: relative;
+    left: 0;
+    top: 0;
 }
-.gabsa :is(img, p) {
-    left: 570px;
-    top: 20px;
+.content.story .story-col .story-desc.stara p {
+    position: relative;
+    left: 0;
+    top: -205px;
+    font-size: 16px;
 }
-.sevenLost :is(img, p) {
-    left: 740px;
-    top: 20px;
+.content.story .story-col .story-desc.neura {
+    position: relative;
+    left: 220px;
+    top: -70px;
 }
-.arsha :is(img, p) {
-    left: 230px;
-    top: 235px;
+.content.story .story-col .story-desc.neura img {
+    position: relative;
+    left: 0;
+    top: 0;
 }
-.muara :is(img, p) {
-    left: 400px;
-    top: 235px;
+.content.story .story-col .story-desc.neura p {
+    position: relative;
+    left: 0;
+    top: -205px;
+    font-size: 16px;
 }
-.tenvis :is(img, p) {
-    left: 570px;
-    top: 235px;
+.content.story .story-col .story-desc.gabsa {
+    position: relative;
+    left: 240px;
+    top: -70px;
 }
-.triplets :is(img, p) {
-    left: 740px;
-    top: 235px;
+.content.story .story-col .story-desc.gabsa img {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.content.story .story-col .story-desc.gabsa p {
+    position: relative;
+    left: 0;
+    top: -205px;
+    font-size: 16px;
+}
+.content.story .story-col .story-desc.sevenLost {
+    position: relative;
+    left: 260px;
+    top: -70px;
+}
+.content.story .story-col .story-desc.sevenLost img {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.content.story .story-col .story-desc.sevenLost p {
+    position: relative;
+    left: 0;
+    top: -205px;
+    font-size: 16px;
+}
+.content.story .story-col .story-desc.arsha {
+    position: relative;
+    left: -400px;
+    top: 140px;
+}
+.content.story .story-col .story-desc.arsha img {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.content.story .story-col .story-desc.arsha p {
+    position: relative;
+    left: 0;
+    top: -205px;
+    font-size: 16px;
+}
+.content.story .story-col .story-desc.muara {
+    position: relative;
+    left: -380px;
+    top: 140px;
+}
+.content.story .story-col .story-desc.muara img {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.content.story .story-col .story-desc.muara p {
+    position: relative;
+    left: 0;
+    top: -205px;
+    font-size: 16px;
+}
+.content.story .story-col .story-desc.tenvis {
+    position: relative;
+    left: -360px;
+    top: 140px;
+}
+.content.story .story-col .story-desc.tenvis img {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.content.story .story-col .story-desc.tenvis p {
+    position: relative;
+    left: 0;
+    top: -205px;
+    font-size: 16px;
+}
+.content.story .story-col .story-desc.triplets {
+    position: relative;
+    left: -340px;
+    top: 140px;
+}
+.content.story .story-col .story-desc.triplets img {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+.content.story .story-col .story-desc.triplets p {
+    position: relative;
+    left: 0;
+    top: -205px;
+    font-size: 16px;
 }
 
 
@@ -642,6 +737,7 @@ header .profil h3 {
     .content.story .story-col {
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
     }
     .content.story .story-col .story-desc {
         width: 70px;
