@@ -623,13 +623,13 @@ header .profil h3 {
 @media (max-width: 368px) {
     .container .box .content-box.active .content.about .desc p  {
         width: 80%;
-        left: 40px;
-        font-size: 11px;
+        left: 30px;
+        font-size: 9px;
         top:-30px;
         height: 0;
     }
     .container .box .content-box.active .content.about .desc h3 {
-        font-size: 14px;
+        font-size: 10px;
         width: 100%;
         left: 60px;
         top: -70px;
