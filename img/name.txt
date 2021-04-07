@@ -1,0 +1,8 @@
+img1 = Arsha's Secret
+img2 = GABSA; Where is The Presense of Gabsa
+img3 = MUARA
+img4 = NEURA; Cross Orbit Return
+img5 = Seven Lost Pieces; From Seven Deadly Sins
+img6 = STARA; Discovery of Seven Companion Stars
+img7 = TENVIS
+img8 = TRIPLETS

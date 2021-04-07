@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/* CSS VARIABLE */
+/* 
+    --logo-font: 'Sacramento', cursive;
+    --main-font: 'Kiwi Maru', serif;
+} */
+/* 
+    font: #A9D6E5; 
+    #89C2D9
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kiwi Maru', serif;
+}
+body {
+    overflow: hidden;
+    background: skyblue;
+}
+/* HEADER STYLE */
+.wrapper {
+    padding: 100px;
+    height: 100vh;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.5em;
+    font-weight: 500;
+    color: #000153;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: sliderLeft 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+header .profil {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    animation: sliderRight 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+header .profil img {
+    height: 100%;
+    width: 60px;
+    margin-right: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0,0,0,0.8);
+}
+header .profil h3 {
+    color: #000153;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+/* CONTENT STYLE */
+.container {
+    position: absolute;
+    display: flex;
+    width: calc(100% - 200px);
+    height: calc(100% - 200px);
+    z-index: 100;
+}
+.container .box {
+    position: relative;
+    width: 33.3%; /* Ubah size sesuai jumlah box */
+    height: 100%;
+    overflow: hidden;
+    margin: 10px;
+}
+.container .box .content-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: skyblue;
+    border: 2px solid #000153;
+    color: #000153;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.container .box .content-box h1{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.4em;
+    object-fit: cover;
+    text-align: center;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: all 0.7s ease-in-out;
+}
+.container .box .content-box.active {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    width: calc(100% - 200px);
+    height: calc(100% - 170px);
+    z-index: 1000;
+    opacity: 1;
+    cursor: default;
+}
+.container .box .content-box.active h1 {
+    display: none;
+}
+.container .box .content-box:hover h1{
+    transform: scale(2);
+}
+/* .container .box .content-box.active:hover h1 {
+    transform: scale(1);
+} */
+.container .box .content-box i {
+    opacity: 0;
+    visibility: hidden;
+}
+.container .box .content-box.active i {
+    position: absolute;
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    font-weight: bold;
+    color: #000153;
+    background: aliceblue;
+    border-radius: 0 5px 0 5px;
+    border-bottom: 2px solid #000153;
+    border-left: 2px solid #000153;
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+}
+.container .box .content-box .content {
+    opacity: 0;
+    visibility: hidden;
+}
+.container .box .content-box.active .content {
+    opacity: 1;
+    visibility: visible;
+}
+.container .box .content-box.active .content:is(.about, .skill, .story) h2{
+    position: absolute;
+    background: aliceblue;
+    border-radius: 5px 0 5px 0;
+    border-right: 2px solid #000153;
+    border-bottom: 2px solid #000153;
+    padding: 10px;
+}
+.container .box .content-box.active .content.about .desc {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+}
+.container .box .content-box.active .content.about .desc img {
+    position: absolute;
+    border-radius: 5px;
+    right: 100px;
+    width: 300px;
+    height: 300px;
+}
+.container .box .content-box.active .content.about .desc p {
+    position: absolute;
+    width: 50%;
+    text-align: justify;
+    font-weight: 500;
+    top: 0;
+    left: 100px;
+    padding: 10px;
+}
+.container .box .content-box.active .content.about .desc h3 {
+    position: absolute;
+    width: 50%;
+    top: -40px;
+    left: 230px;
+    letter-spacing: 2px;
+}
+/* SKILL */
+.skill-desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skill img {
+    position: absolute;
+    height: 473px;
+    width: 1164px;
+    z-index: -1;
+}
+.skill-desc ul {
+    text-align: center;
+    list-style: none;
+    position: relative;
+    top: 100px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #000153;
+}
+.skill-desc ul li {
+    margin: 10px;
+}
+.skill-desc ul li:hover {
+    font-weight: bold;
+}
+
+/* STORY */
+.content.story .story-col {
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content.story .story-col .story-desc {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    cursor: pointer;
+}
+.content.story .story-col .story-desc p {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    color: aliceblue;
+    font-weight: 500;
+    letter-spacing: 2px;
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+.content.story .story-col .story-desc img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.content.story .story-col .story-desc:hover p {
+    visibility: visible;
+    opacity: 1;
+}
+.stara :is(img, p) {
+    left: 230px;
+    top: 20px;
+}
+.neura :is(img, p) {
+    left: 400px;
+    top: 20px;
+}
+.gabsa :is(img, p) {
+    left: 570px;
+    top: 20px;
+}
+.sevenLost :is(img, p) {
+    left: 740px;
+    top: 20px;
+}
+.arsha :is(img, p) {
+    left: 230px;
+    top: 235px;
+}
+.muara :is(img, p) {
+    left: 400px;
+    top: 235px;
+}
+.tenvis :is(img, p) {
+    left: 570px;
+    top: 235px;
+}
+.triplets :is(img, p) {
+    left: 740px;
+    top: 235px;
+}
+
+
+/* FOOTER */
+.footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer .sosmed {
+    position: relative;
+    display: flex;
+}
+.footer .sosmed li {
+    list-style: none;
+}
+.footer .sosmed li a {
+    color: #000153;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    margin-right: 20px;
+    display: inline-block;
+    opacity: 0;
+    animation: sliderLeft 1s ease-in-out forwards;
+    animation-delay: calc(0.3s * var(--i));
+}
+.footer .sosmed li a:hover {
+    font-weight: bold;
+}
+.footer .sosmed li:last-child a {
+    margin-right: 0;
+}
+.copyright {
+    color: #111;
+    letter-spacing: 1px;
+    font-weight: 600;
+    opacity: 0;
+    animation: sliderRight 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+
+/* make animation */
+@keyframes sliderRight {
+    0% {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes sliderLeft {
+    0% {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* MEDIA QUERY */
+@media (max-width: 960px) {
+    .container .box .content-box.active .content.about .desc img {
+        position: absolute;
+        border-radius: 5px;
+        right: 40px;
+        top: 10px;
+        width: 200px;
+        height: 300px;
+    }
+    .container .box .content-box.active .content.about .desc p  {
+        width: 50%;
+        font-size: 14px;
+        left: 60px;
+        height: 0;
+    }
+    .container .box .content-box.active .content.about .desc h3 {
+        left: 250px;
+    }
+    .content.story .story-col {
+        left: 0;
+    }
+    .content.story .story-col .story-desc {
+        width: 130px;
+        height: 180px;
+    }
+    .content.story .story-col .story-desc p {
+        font-size: 14px;
+    }
+    .stara :is(img, p) {
+        left: 170px;
+        top: 30px;
+    }
+    .neura :is(img, p) {
+        left: 320px;
+        top: 30px;
+    }
+    .gabsa :is(img, p) {
+        left: 470px;
+        top: 30px;
+    }
+    .sevenLost :is(img, p) {
+        left: 620px;
+        top: 30px;
+    }
+    .arsha :is(img, p) {
+        left: 170px;
+        top: 235px;
+    }
+    .muara :is(img, p) {
+        left: 320px;
+        top: 235px;
+    }
+    .tenvis :is(img, p) {
+        left: 470px;
+        top: 235px;
+    }
+    .triplets :is(img, p) {
+        left: 620px;
+        top: 235px;
+    }
+}
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 80px 20px;
+    }
+    header {
+        padding: 10px 20px;
+        height: 70px;
+    }
+    header .logo {
+        display: none;
+    }
+    header .profil {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px 200px;
+        margin: 20px 0;
+    }
+    header .profil h3 {
+        font-size: 14px;
+    }
+    header .profil img {
+        width: 40px;
+    }
+    .container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: calc(100% - 70px);
+        height: calc(100% - 170px);
+    }
+    .container .box {
+        width: 100%;
+        height: 27%;
+    }
+    .container .box .content-box.active {
+        top: 70px;
+        left: 20px;
+        margin-top: 10px;
+        width: calc(100% - 50px);
+        height: calc(100% - 160px);
+    }
+    .container .box .content-box h1 {
+        writing-mode: horizontal-tb;
+    }
+    .desc img {
+        display: none;
+    }
+    .container .box .content-box.active .content.about .desc {
+        top: 170px;
+    }
+    .container .box .content-box.active .content.about .desc p  {
+        width: 80%;
+        left: 60px;
+        height: 0;
+    }
+    .container .box .content-box.active .content.about .desc h3 {
+        left: 170px;
+    }
+    .footer {
+        width: 100%;
+        padding: 0 20px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content.story .story-col .story-desc {
+        width: 100px;
+        height: 150px;
+    }
+    .content.story .story-col .story-desc p {
+        font-size: 12px;
+    }
+}
+@media (max-width: 610px) {
+    header .profil {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px 0;
+        width: 100%;
+    }
+    .container .box .content-box.active .content.about .desc p  {
+        width: 80%;
+        left: 60px;
+        font-size: 14px;
+        top: -30px;
+        height: 0;
+    }
+    .container .box .content-box.active .content.about .desc h3 {
+        font-size: 16px;
+        width: 100%;
+        left: 150px;
+        top: -70px;
+    }
+    .skill-desc ul {
+        top: 100px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: #000153;
+    }
+    .content.story .story-col {
+        left: 0;
+    }
+    .content.story .story-col .story-desc {
+        width: 90px;
+        height: 140px;
+    }
+    .content.story .story-col .story-desc p {
+        font-size: 10px;
+    }
+    .stara :is(img, p) {
+        left: 100px;
+        top: 50px;
+    }
+    .neura :is(img, p) {
+        left: 220px;
+        top: 50px;
+    }
+    .gabsa :is(img, p) {
+        left: 350px;
+        top: 50px;
+    }
+    .sevenLost :is(img, p) {
+        left: 470px;
+        top: 50px;
+    }
+    .arsha :is(img, p) {
+        left: 100px;
+        top: 235px;
+    }
+    .muara :is(img, p) {
+        left: 220px;
+        top: 235px;
+    }
+    .tenvis :is(img, p) {
+        left: 350px;
+        top: 235px;
+    }
+    .triplets :is(img, p) {
+        left: 470px;
+        top: 235px;
+    }
+}
+@media (max-width: 490px) {
+    .container .box .content-box.active .content.about .desc p  {
+        width: 80%;
+        left: 40px;
+        font-size: 13px;
+        top:-30px;
+        height: 0;
+    }
+    .container .box .content-box.active .content.about .desc h3 {
+        font-size: 16px;
+        width: 100%;
+        left: 100px;
+        top: -70px;
+    }
+    .stara :is(img, p) {
+        left: 70px;
+        top: 50px;
+    }
+    .neura :is(img, p) {
+        left: 170px;
+        top: 50px;
+    }
+    .gabsa :is(img, p) {
+        left: 270px;
+        top: 50px;
+    }
+    .sevenLost :is(img, p) {
+        left: 370px;
+        top: 50px;
+    }
+    .arsha :is(img, p) {
+        left: 70px;
+        top: 235px;
+    }
+    .muara :is(img, p) {
+        left: 170px;
+        top: 235px;
+    }
+    .tenvis :is(img, p) {
+        left: 270px;
+        top: 235px;
+    }
+    .triplets :is(img, p) {
+        left: 370px;
+        top: 235px;
+    }
+}
+@media (max-width: 368px) {
+    .container .box .content-box.active .content.about .desc p  {
+        width: 80%;
+        left: 40px;
+        font-size: 11px;
+        top:-30px;
+        height: 0;
+    }
+    .container .box .content-box.active .content.about .desc h3 {
+        font-size: 14px;
+        width: 100%;
+        left: 60px;
+        top: -70px;
+    }
+    .skill-desc ul {
+        font-size: 14px;
+    }
+    .content.story .story-col .story-desc {
+        width: 70px;
+        height: 120px;
+    }
+    .content.story .story-col .story-desc p {
+        font-size: 8px;
+    }
+    .stara :is(img, p) {
+        left: 45px;
+        top: 50px;
+    }
+    .neura :is(img, p) {
+        left: 120px;
+        top: 50px;
+    }
+    .gabsa :is(img, p) {
+        left: 195px;
+        top: 50px;
+    }
+    .sevenLost :is(img, p) {
+        left: 270px;
+        top: 50px;
+    }
+    .arsha :is(img, p) {
+        left: 45px;
+        top: 235px;
+    }
+    .muara :is(img, p) {
+        left: 120px;
+        top: 235px;
+    }
+    .tenvis :is(img, p) {
+        left: 195px;
+        top: 235px;
+    }
+    .triplets :is(img, p) {
+        left: 270px;
+        top: 235px;
+    }
+    .container .box .content-box:hover h1{
+        transform: scale(1.5);
+    }
+}
